@@ -577,13 +577,12 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script>
       const form = document.getElementById('contact_form');
-      console.log('FORM', form);
       const submitBtn = form.querySelector('button[type="submit"]');
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const formData = new FormData(form);
-        formData.append('access_key', '528450bc-e72a-47f3-902e-5a45a161a2c1'); // local : 528450bc-e72a-47f3-902e-5a45a161a2c1 github : 2690da86-3297-4eb7-b8a3-8adbe0ee7097
+        formData.append('access_key', '2690da86-3297-4eb7-b8a3-8adbe0ee7097'); // local : 528450bc-e72a-47f3-902e-5a45a161a2c1 github : 2690da86-3297-4eb7-b8a3-8adbe0ee7097
 
         const originalText = submitBtn.textContent;
 
