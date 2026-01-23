@@ -23,7 +23,7 @@
       }
 
       /* Pruple, green and yellow */
-      /* :root {
+      :root {
         --purple: #5a3f6e;
         --green: #8a9a7b;
         --yellow: #d4b86a;
@@ -31,7 +31,7 @@
         --lavender: #d9c9d2;
         --black: #2b1a40;
         --white: #fefbf8;
-      } */
+      }
 
       /* Pruple and green */
       /* :root {
@@ -45,7 +45,7 @@
       } */
 
       /* Purple and yellow */
-      :root {
+      /* :root {
         --purple: #5c3d6f;
         --green: #5c3d6f;
         --lavender: #d9c9d2;
@@ -53,7 +53,7 @@
         --beige: #f4efe5;
         --black: #2b1a40;
         --white: #fefbf8;
-      }
+      } */
 
       /* Original palette */
       /* :root {
@@ -73,10 +73,10 @@
       a.anchor {
         display: block;
         position: relative;
-        top: -56px;
+        top: -114px;
         visibility: hidden;
         @media (width >= 48rem) {
-          top: -100px;
+          top: -112px;
         }
       }
     </style>
@@ -87,15 +87,17 @@
     style="font-family: 'Nunito', sans-serif"
   >
     <header>
-      <div class="fixed w-full top-0 bg-[var(--lavender)]">
-        <div class="flex justify-center py-2 font-title">
-          <div class="text-4xl">
-            <a href="index.html">TerrAkasha</a>
-          </div>
+      <div
+        class="fixed w-full top-0 bg-[var(--beige)] flex flex-col md:flex-row items-center justify-center"
+      >
+        <div class="p-2">
+          <a href="index.html"
+            ><img src="assets/img/logo.png" alt="logo" class="h-24 min-w-34"
+          /></a>
         </div>
         <nav class="px-4" x-data="{ open: false }">
           <!-- Icons -->
-          <div class="flex sm:hidden top-3 absolute">
+          <div class="flex sm:hidden top-3 left-6 absolute">
             <button @click="open = !open">
               <svg
                 x-show="!open"
@@ -135,16 +137,19 @@
             <menu
               class="flex justify-center flex-col items-center gap-4 pb-4 font-thin text-xl"
             >
-              <a href="#welcome"><button @click="open = false">Accueil</button></a>
-              <a href="#about"
-                ><button @click="open = false">L'esprit TerrAkasha</button></a
-              >
+              <a href="#welcome"
+                ><button @click="open = false">
+                  <img src="/assets/img/home.svg" alt="Accueil" class="w-8" /></button
+              ></a>
               <a href="#place"
                 ><button @click="open = false">Découvrir TerrAkasha</button></a
               >
               <a href="#stay"><button @click="open = false">Votre séjour</button></a>
               <a href="#classes"><button @click="open = false">Cours Hebdo</button></a>
               <a href="#events"><button @click="open = false">Évènements</button></a>
+              <a href="#about"
+                ><button @click="open = false">L'esprit TerrAkasha</button></a
+              >
               <a href="#contact"><button @click="open = false">Contact</button></a>
             </menu>
           </div>
@@ -153,33 +158,35 @@
           <div class="hidden sm:block">
             <menu class="flex justify-center items-center gap-4 font-thin text-xl pb-4">
               <a href="#welcome">Accueil</a>
-              <a href="#about">L'esprit TerrAkasha</a>
               <a href="#place">Découvrir TerrAkasha</a>
               <a href="#stay">Votre Séjour</a>
               <a href="#classes">Cours hebdo</a>
               <a href="#events">Évènements</a>
+              <a href="#about">L'esprit TerrAkasha</a>
               <a href="#contact">Contact</a>
             </menu>
           </div>
         </nav>
       </div>
     </header>
-    <div class="w-full pt-14 md:pt-36 flex flex-col justify-center items-center">
+    <div
+      class="w-full pt-28 md:pt-44 flex flex-col justify-center items-center md:text-xl"
+    >
       <!-- WELCOME PART -->
       <a class="anchor" id="welcome"></a>
       <div
-        class="w-screen h-40 bg-[url(/terrakasha/assets/img/terrakasha.jpg)] bg-center bg-cover md:hidden mb-8"
+        class="w-screen h-40 bg-[url(/assets/img/terrakasha.jpg)] bg-center bg-cover md:hidden mb-8"
       ></div>
       <div
         class="pb-2 max-w-5xl flex-col-reverse md:flex-row flex gap-12 items-start justify-center px-6 md:px-0"
       >
         <div
-          class="w-90 h-80 bg-[url(/terrakasha/assets/img/terrakasha.jpg)] bg-center bg-cover hidden md:block"
+          class="w-90 h-80 bg-[url(/assets/img/terrakasha.jpg)] bg-center bg-cover hidden md:block"
         ></div>
         <div class="flex-1">
-          <h1 class="font-title text-2xl">TerrAkasha – L’Ancrage Céleste</h1>
-          <h3 class="font-bold">La Maison des Chemins de Conscience</h3>
-          <p class="italic">Centre Holistique de Reconnexion et de Transformation</p>
+          <h1 class="font-title text-3xl">TerrAkasha</h1>
+          <h3 class="font-bold">Maison de bien-être</h3>
+          <p class="italic text-lg">Centre de développement personnel</p>
           <p class="pt-2 text-justify">
             Ici, chaque pas est une invitation à
             <span class="font-bold">reconnecter à l’essentiel</span>, chaque souffle une
@@ -191,57 +198,22 @@
             veniez pour une retraite ou pour en créer une, TerrAkasha est votre
             sanctuaire.
           </p>
-          <ul class="list-disc pl-8">
-            <li class="text-justify">
-              <span class="font-bold">Pour vous</span> : Retraites holistiques (yoga,
-              méditation, constellations familiales, bains sonores, cérémonies, formations
-              et bien autres...).
-            </li>
-            <li class="text-justify">
-              <span class="font-bold">Pour vos projets</span> : Un écrin pour vos
-              événements conscience et bien-être.
-            </li>
-          </ul>
         </div>
       </div>
 
       <!-- BANNER -->
       <div
-        class="bg-[var(--yellow)] w-full p-8 text-center font-title italic text-xl text-[var(--white)]"
+        class="bg-[var(--purple)] w-full p-8 text-center font-title italic md:text-2xl text-[var(--white)] !font-bold"
       >
         Ici, matière et spirituel ne font qu’un, pour des expériences où s’enraciner et
         s’élever deviennent une seule et même danse.
-      </div>
-
-      <!-- ABOUT PART -->
-      <a class="anchor" id="about"></a>
-      <div class="bg-[var(--beige)] w-full flex items-center justify-center p-8">
-        <div class="max-w-5xl text-center">
-          <h2 class="font-title text-2xl">L'esprit TerrAkasha</h2>
-          <p class="pt-2">
-            TerrAkasha est né de la rencontre entre deux chemins : celui d’Ilenia, chamane
-            et exploratrice de l’âme, et celui de Michel, alchimiste de l’accueil.
-            Ensemble, nous avons imaginé un lieu pour se ressourcer, grandir et célébrer
-            la vie.
-          </p>
-          <p class="pt-2">
-            Ici, vie, accueil et transformation se tissent dans un esprit d’inclusion et
-            d’ouverture. Chaque rencontre devient une occasion d’éveil, un espace pour
-            apprendre et grandir ensemble.
-          </p>
-          <p class="pt-2">
-            TerrAkasha est le terreau de ce qui nous anime : l’accueil comme art de vivre,
-            la Terre comme maître de sagesse, et chaque rencontre comme une graine
-            d’éveil.
-          </p>
-        </div>
       </div>
 
       <!-- PLACE PART -->
       <a class="anchor" id="place"></a>
       <div class="py-8 max-w-5xl">
         <div class="pb-8 text-center px-6 md:px-0">
-          <h2 class="font-title text-2xl">
+          <h2 class="font-title text-2xl md:text-3xl">
             Un lieu pour se poser, se reconnecter, s’élever
           </h2>
           <p class="pt-2 italic">
@@ -254,11 +226,13 @@
             bien-être et de transformation.
           </p>
         </div>
-        <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <div
+          class="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-8"
+        >
           <div
             class="pt-2 flex flex-row-reverse items-stretch md:items-center md:flex-col md:w-1/3"
           >
-            <div class="pb-4 px-2 text-center flex-1">
+            <div class="pb-4 px-2 text-center flex-1 content-center">
               <h3 class="font-bold">Un espace pour le corps et l’esprit</h3>
               <p class="">
                 Quatre chambres douillettes qui accueillent jusqu'à 10 personnes, un
@@ -266,38 +240,56 @@
                 ressourcer dans une ambiance chaleureuse.
               </p>
             </div>
-            <div class="w-1/3 md:h-70 md:w-full bg-[var(--beige)]">IMAGE</div>
+            <div class="w-1/3 md:h-70 md:w-full">
+              <img
+                src="/assets/img/chambre.jpg"
+                class="w-full h-full object-cover object-center"
+                alt="Chambres d'hôtes jusqu’à 10 personnes Seyssel Haute Savoie - Ain"
+              />
+            </div>
           </div>
           <div
-            class="pt-2 flex flex-row items-stretch md:items-center md:flex-col-reverse md:w-1/3"
+            class="pt-2 flex flex-row items-stretch md:items-center md:justify-between md:flex-col-reverse md:w-1/3"
           >
-            <div class="pt-4 px-2 text-center flex-1">
+            <div class="pt-4 px-2 text-center flex-1 content-center">
               <h3 class="font-bold">Des installations extérieures pour se ressourcer</h3>
               <p class="">
                 Bain nordique, bassin d'eau froide, sauna et terrasse vous permettent un
                 moment de détente en pleine nature.
               </p>
             </div>
-            <div class="w-1/3 md:h-70 md:w-full bg-[var(--beige)]">IMAGE</div>
+            <div class="w-1/3 md:h-70 md:w-full">
+              <img
+                src="/assets/img/sauna.jpg"
+                class="w-full h-full object-cover object-center"
+                alt="Bain nordique, bain froid et sauna Seyssel Haute Savoie - Ain"
+              />
+            </div>
           </div>
           <div
             class="pt-2 flex flex-row-reverse items-stretch md:items-center md:flex-col md:w-1/3"
           >
-            <div class="pb-4 px-2 text-center flex-1">
+            <div class="pb-4 px-2 text-center flex-1 content-center">
               <h3 class="font-bold">Un cocon de nature</h3>
               <p class="">
                 Le jardin et les alentours offrent un cadre agréable pour des pratiques en
                 plein air ou des temps de pause en connexion avec la nature.
               </p>
             </div>
-            <div class="w-1/3 md:h-70 md:w-full bg-[var(--beige)]">IMAGE</div>
+            <div class="w-1/3 md:h-70 md:w-full">
+              <img
+                src="/assets/img/jardin.jpg"
+                class="w-full h-full object-cover object-center"
+                alt="Jardin maison de bien-être Seyssel Haute Savoie - Ain"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       <!-- BANNER -->
       <div
-        class="bg-[var(--yellow)] w-full p-8 text-center font-title italic text-xl text-[var(--white)]"
+        class="bg-[var(--green)] w-full p-8 text-center font-title italic md:text-2xl !font-bold text-[var(--white)]"
       >
         À TerrAkasha, le bien-être se réinvente à chaque instant, au gré de vos besoins et
         de vos inspirations
@@ -308,7 +300,7 @@
       <div class="bg-[var(--beige)] w-full flex items-center justify-center py-8">
         <div class="flex flex-col items-center justify-center">
           <div class="text-center max-w-3xl pb-8">
-            <h2 class="font-title text-2xl">Votre Séjour</h2>
+            <h2 class="font-title text-2xl md:text-3xl">Votre Séjour</h2>
             <p class="italic">
               Privé ou organisateurs de stages et ateliers ? TerrAkasha vous accueille
               dans son espace chaleureux et lumineux, un lieu où chaque instant est une
@@ -317,10 +309,12 @@
           </div>
 
           <div
-            class="bg-[url(/terrakasha/assets/img/terrakasha.jpg)] bg-center bg-cover w-screen p-8 flex flex-col items-center justify-center"
+            class="bg-[url(/assets/img/terrakasha.jpg)] bg-center bg-cover w-screen p-8 flex flex-col items-center justify-center"
           >
             <div class="bg-white/85 h-full max-w-3xl p-4">
-              <h3 class="font-title text-xl">Un cadre flexible pour vos besoins</h3>
+              <h3 class="font-title text-xl md:text-2xl">
+                Un cadre flexible pour vos besoins
+              </h3>
               <ul class="list-disc pl-8">
                 <li>
                   <span class="font-bold">Privatisation de la maison d’hôtes</span> :
@@ -347,14 +341,18 @@
             </div>
           </div>
 
-          <div class="flex gap-8 py-8 px-6 md:px-0">
+          <div class="flex gap-8 py-8 px-6 md:px-0 items-center">
             <div
-              class="w-40 h-40 rounded-full bg-[var(--green)] items-center justify-center hidden md:flex"
+              class="w-40 h-40 rounded-full items-center justify-center hidden md:flex"
             >
-              IMAGE
+              <img
+                src="/assets/img/meal.jpg"
+                class="w-full h-full object-cover object-center rounded-full"
+                alt="Repas végétariens et bio, sans gluten, végétalien Seyssel Haute Savoie - Ain"
+              />
             </div>
             <div class="flex-1 max-w-md">
-              <h3 class="font-title text-xl pt-4">Repas & Cuisine</h3>
+              <h3 class="font-title text-xl md:text-2xl pt-4">Repas & Cuisine</h3>
               <div>
                 <span class="font-bold italic">Nourrir le corps, éveiller les sens.</span>
                 <p class="text-justify">
@@ -374,12 +372,16 @@
             class="flex flex-row-reverse items-center justify-end gap-8 pb-8 md:py-8 text-right px-6 md:px-0"
           >
             <div
-              class="w-40 h-40 rounded-full bg-[var(--green)] items-center justify-center hidden md:flex"
+              class="w-40 h-40 rounded-full items-center justify-center hidden md:flex"
             >
-              IMAGE
+              <img
+                src="/assets/img/yoga.jpg"
+                class="w-full h-full object-cover object-center rounded-full"
+                alt="Cours de yoga, massages et soins énergétiques Seyssel Haute Savoie - Ain"
+              />
             </div>
             <div class="flex-1 max-w-md">
-              <h3 class="font-title text-xl pt-4">Yoga, Massages & Soins</h3>
+              <h3 class="font-title text-xl md:text-2xl pt-4">Yoga, Massages & Soins</h3>
               <div>
                 <span class="font-bold italic"
                   >Un souffle. Un mouvement. Un retour à soi.</span
@@ -392,7 +394,7 @@
                 <p class="text-justify pt-2">
                   <a
                     class="underline font-bold text-[var(--purple)] text-lg block pt-2"
-                    href="/terrakasha/assets/soins.pdf"
+                    href="/assets/soins.pdf"
                     target="_blank"
                     >Découvrez nos massages, soins et séances de yoga</a
                   >
@@ -409,7 +411,7 @@
         class="py-8 max-w-5xl w-full flex-col md:flex-row flex gap-8 justify-between items-center px-6 md:px-0"
       >
         <div class="max-w-xl">
-          <h2 class="font-title text-2xl">Cours hebdomadaires</h2>
+          <h2 class="font-title text-2xl md:text-3xl">Cours hebdomadaires</h2>
           <p>
             Des pratiques régulières pour cultiver l’équilibre et le bien-être. Nos cours
             hebdomadaires, animés par des intervenants passionnés et certifiés, vous
@@ -417,7 +419,7 @@
           </p>
           <a
             class="underline font-bold text-[var(--purple)] text-lg block pt-2"
-            href="/terrakasha/assets/soins.pdf"
+            href="/assets/soins.pdf"
             target="_blank"
             >Découvrez le programme détaillé ici.</a
           >
@@ -425,17 +427,17 @@
         </div>
         <div class="flex gap-4 md:gap-6">
           <img
-            src="/terrakasha/assets/img/meditation.svg"
+            src="/assets/img/meditation.svg"
             class="w-20 md:w-28"
             alt="Cours de yoga Seyssel Haute Savoie - Ain"
           />
           <img
-            src="/terrakasha/assets/img/main.svg"
+            src="/assets/img/main.svg"
             class="w-20 md:w-28"
             alt="Massages Seyssel Haute Savoie - Ain"
           />
           <img
-            src="/terrakasha/assets/img/fleur.svg"
+            src="/assets/img/fleur.svg"
             class="w-20 md:w-28"
             alt="Soins énergétiques Seyssel Haute Savoie - Ain"
           />
@@ -444,7 +446,7 @@
 
       <!-- BANNER -->
       <div
-        class="bg-[var(--yellow)] w-full p-8 text-center font-title italic text-xl text-[var(--white)]"
+        class="bg-[var(--yellow)] w-full p-8 text-center font-title italic md:text-2xl !font-bold text-[var(--white)]"
       >
         Ici, terre et ciel se rencontrent pour vous offrir une parenthèse de paix, de
         bien-être et de transformation.
@@ -453,13 +455,17 @@
       <!-- EVENTS PART -->
       <a class="anchor" id="events"></a>
       <div
-        class="max-w-5xl flex flex-col-reverse md:flex-row items-center justify-end w-full pt-8 md:py-8 gap-4 md:gap-12 items-stretch"
+        class="max-w-5xl flex flex-col md:flex-row items-center justify-end w-full pb-8 md:pt-8 md:py-8 gap-4 md:gap-12 items-stretch"
       >
-        <div class="w-full min-h-40 md:min-h-none md:max-w-lg flex-1 bg-[var(--beige)]">
-          IMAGE
+        <div class="w-full md:min-h-40 md:max-h-80 md:max-w-lg flex-1 bg-[var(--beige)]">
+          <img
+            src="/assets/img/retraite.jpg"
+            class="w-full h-full object-cover object-bottom"
+            alt="Stage, Retraite Spirituelle & Atelier Seyssel Haute Savoie - Ain"
+          />
         </div>
         <div class="max-w-lg flex-1 px-6 md:px-0">
-          <h3 class="font-title text-2xl">Stages & Retraites & Ateliers</h3>
+          <h3 class="font-title text-2xl md:text-3xl">Stages & Retraites & Ateliers</h3>
           <p class="font-bold">Se reconnecter, créer, se transformer.</p>
           <p class="text-justify">
             Stages, ateliers, formations et retraites : des expériences pour explorer,
@@ -467,11 +473,45 @@
           </p>
           <a
             class="underline font-bold text-[var(--purple)] text-lg block pt-2"
-            href="/terrakasha/assets/soins.pdf"
+            href="/assets/soins.pdf"
             target="_blank"
             >Découvrez notre calendrier d'évènements ici.</a
           >
           <p class="italic">Réservations directement auprès de chaque intervenant.</p>
+        </div>
+      </div>
+
+      <!-- ABOUT PART -->
+      <a class="anchor" id="about"></a>
+      <div
+        class="bg-[var(--beige)] w-full flex flex-col-reverse md:flex-row gap-8 items-center justify-center p-8"
+      >
+        <div class="max-w-3xl text-center flex-1">
+          <h2 class="font-title text-2xl md:text-3xl">L'esprit TerrAkasha</h2>
+          <p class="pt-2">
+            TerrAkasha est né de la rencontre entre deux chemins : celui d’Ilenia, chamane
+            et exploratrice de l’âme, et celui de Michel, alchimiste de l’accueil.
+            Ensemble, nous avons imaginé un lieu pour se ressourcer, grandir et célébrer
+            la vie.
+          </p>
+          <p class="pt-2">
+            Ici, vie, accueil et transformation se tissent dans un esprit d’inclusion et
+            d’ouverture.
+          </p>
+          <p class="pt-2">
+            TerrAkasha est le terreau de ce qui nous anime : l’accueil comme art de vivre,
+            la Terre comme maître de sagesse, et chaque rencontre comme une graine
+            d’éveil.
+          </p>
+        </div>
+        <div
+          class="w-50 h-50 rounded-full bg-[var(--white)] flex items-center justify-center"
+        >
+          <img
+            src="/assets/img/about.gif"
+            class="w-full h-full object-cover object-center rounded-full"
+            alt="Michel et Ilénia vous accueillent à TerrAkasha Seyssel Haute Savoie - Ain"
+          />
         </div>
       </div>
 
@@ -488,15 +528,15 @@
             </p>
             <ul class="pt-8 flex flex-col gap-1">
               <li class="flex gap-2 items-center">
-                <img src="/terrakasha/assets/img/home.svg" class="h-4" />
+                <img src="/assets/img/address.svg" class="h-4" />
                 737 Rte de Pologny - 74910 Seyssel, France
               </li>
               <li class="flex gap-2 items-center">
-                <img src="/terrakasha/assets/img/phone.svg" class="h-5" />
+                <img src="/assets/img/phone.svg" class="h-5" />
                 +33(0)7.50.60.64.56
               </li>
               <li class="flex gap-2 items-center">
-                <img src="/terrakasha/assets/img/email.svg" class="h-5" />
+                <img src="/assets/img/email.svg" class="h-5" />
                 <a
                   class="underline font-bold"
                   href="mailto:terrAkasha@protonmail.com"
@@ -509,19 +549,13 @@
                   class="underline font-bold text-[var(--purple)]"
                   href="https://www.facebook.com/profile.php?id=61584020701605"
                   target="_blank"
-                  ><img
-                    src="/terrakasha/assets/img/facebook.svg"
-                    alt="facebook"
-                    class="w-8"
+                  ><img src="/assets/img/facebook.svg" alt="facebook" class="w-8"
                 /></a>
                 <a
                   class="underline font-bold text-[var(--purple)]"
                   href="https://www.instagram.com/terrakasha_/"
                   target="_blank"
-                  ><img
-                    src="/terrakasha/assets/img/instagram.svg"
-                    alt="instagram"
-                    class="w-8"
+                  ><img src="/assets/img/instagram.svg" alt="instagram" class="w-8"
                 /></a>
               </li>
             </ul>
