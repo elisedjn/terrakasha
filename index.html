@@ -4,8 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TerrAkasha</title>
+
+    <!-- TITLE + FAVICON + DESCRIPTION SEO -->
+    <title>
+      TerrAkasha – Maison de bien-être, stages et retraites à Seyssel (Haute-Savoie)
+    </title>
     <link rel="icon" type="image/png" href="img/favicon.ico" />
+    <meta
+      name="description"
+      content="TerrAkasha, maison de bien-être à Seyssel (Haute-Savoie - Ain) : séjours ressourçants, stages, retraites, yoga, massages, bains nordiques et sauna dans un cadre nature."
+    />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://www.terrakasha.com/" />
+
+    <!-- OPEN GRAPH (FB, WhatsApp…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="TerrAkasha – Maison de bien-être à Seyssel" />
+    <meta
+      property="og:description"
+      content="Maison d’hôtes et centre de développement personnel : retraites, stages et ateliers bien-être à Seyssel (Haute-Savoie)."
+    />
+    <meta property="og:url" content="https://www.terrakasha.com/" />
+    <meta
+      property="og:image"
+      content="https://www.terrakasha.com/assets/img/terrakasha.jpg"
+    />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TerrAkasha – Maison de bien-être à Seyssel" />
+    <meta
+      name="twitter:description"
+      content="Séjours bien-être, stages, retraites, yoga, massages, bains nordiques et sauna à TerrAkasha."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.terrakasha.com/assets/img/terrakasha.jpg"
+    />
+
+    <!-- Données locales basiques (NAP) -->
+    <meta name="geo.region" content="FR-74" />
+    <meta name="geo.placename" content="Seyssel" />
+    <meta name="geo.position" content="45.959;5.841" />
+    <meta name="ICBM" content="45.959, 5.841" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -21,8 +64,6 @@
       html {
         scroll-behavior: smooth;
       }
-
-      /* Pruple, green and yellow */
       :root {
         --purple: #5a3f6e;
         --green: #8a9a7b;
@@ -32,40 +73,6 @@
         --black: #2b1a40;
         --white: #fefbf8;
       }
-
-      /* Pruple and green */
-      /* :root {
-        --purple: #6b4e7a;
-        --lavender: #d9c9d2;
-        --green: #7d8f6e;
-        --yellow: #7d8f6e;
-        --beige: #ede6d8;
-        --black: #2b1a40;
-        --white: #fefbf8;
-      } */
-
-      /* Purple and yellow */
-      /* :root {
-        --purple: #5c3d6f;
-        --green: #5c3d6f;
-        --lavender: #d9c9d2;
-        --yellow: #d8ae5f;
-        --beige: #f4efe5;
-        --black: #2b1a40;
-        --white: #fefbf8;
-      } */
-
-      /* Original palette */
-      /* :root {
-        --purple: #7142ad;
-        --green: #b9c899;
-        --yellow: #edb767;
-        --orange: #f4af49;
-        --lavender: #cba8c2;
-        --beige: #f6e9cc;
-        --black: #2b1a40;
-        --white: #fefbf8;
-      } */
       .font-title {
         font-family: 'Handlee', sans-serif;
         font-weight: 400;
@@ -95,7 +102,11 @@
             ><img src="assets/img/logo.png" alt="logo" class="h-24 min-w-34"
           /></a>
         </div>
-        <nav class="px-4" x-data="{ open: false }">
+        <nav
+          class="px-4"
+          x-data="{ open: false }"
+          aria-label="Navigation principale TerrAkasha"
+        >
           <!-- Icons -->
           <div class="flex sm:hidden top-3 left-6 absolute">
             <button @click="open = !open">
@@ -186,7 +197,7 @@
         <div class="flex-1">
           <h1 class="font-title text-3xl">TerrAkasha</h1>
           <h3 class="font-bold">Maison de bien-être</h3>
-          <p class="italic text-lg">Centre de développement personnel</p>
+          <p class="italic text-lg">Centre de développement personnel en Haute-Savoie</p>
           <p class="pt-2 text-justify">
             Ici, chaque pas est une invitation à
             <span class="font-bold">reconnecter à l’essentiel</span>, chaque souffle une
@@ -237,7 +248,7 @@
               <img
                 src="assets/img/chambre.jpg"
                 class="w-full h-full object-cover object-center"
-                alt="Chambres d'hôtes jusqu’à 10 personnes Seyssel Haute Savoie - Ain"
+                alt="TerrAkasha | Chambres d'hôtes jusqu’à 10 personnes Seyssel Haute Savoie - Ain"
               />
             </div>
           </div>
@@ -254,7 +265,7 @@
               <img
                 src="assets/img/salle.jpeg"
                 class="w-full h-full object-cover object-center"
-                alt="Bain nordique, bain froid et sauna Seyssel Haute Savoie - Ain"
+                alt="Terrakasha - Salle de pratique pour yoga, ateliers, massages, cours de peinture, séances de bien-être, Seyssel Haute Savoie - Ain"
               />
             </div>
           </div>
@@ -272,7 +283,7 @@
               <img
                 src="assets/img/sejour.png"
                 class="w-full h-full object-cover object-center"
-                alt="Jardin maison de bien-être Seyssel Haute Savoie - Ain"
+                alt="TerrAkasha | Cuisine toute équipée et salon convivial pour séjours en nature à Seyssel Haute Savoie - Ain"
               />
             </div>
           </div>
@@ -289,7 +300,7 @@
               <img
                 src="assets/img/sauna.jpg"
                 class="w-full h-full object-cover object-center"
-                alt="Bain nordique, bain froid et sauna Seyssel Haute Savoie - Ain"
+                alt="TerrAkasha | Bain nordique, bain froid et sauna Seyssel Haute Savoie - Ain"
               />
             </div>
           </div>
@@ -311,8 +322,9 @@
           <div class="text-center max-w-3xl pb-8">
             <h2 class="font-title text-2xl md:text-3xl">Votre Séjour</h2>
             <p class="italic">
-              TerrAkasha vous accueille dans son espace chaleureux et lumineux, un lieu où
-              chaque instant est une invitation à ralentir et à se reconnecter.
+              TerrAkasha vous accueille à Seyssel, en Haute-Savoie, dans son espace
+              chaleureux et lumineux, un lieu où chaque instant est une invitation à
+              ralentir et à se reconnecter.
             </p>
           </div>
 
@@ -336,13 +348,14 @@
                 </li>
                 <li>
                   <span class="font-bold">Formule spéciale stages et retraites</span> :
-                  contactez-nous pour des offres adaptées.
+                  <a href="#contact" class="underline cursor-pointer">contactez-nous</a>
+                  pour des offres adaptées.
                 </li>
               </ul>
               <p class="text-center pt-2">
                 <a
                   class="bg-[var(--purple)] text-[var(--white)] text-lg block py-2 max-w-lg mx-auto rounded-full hover:opacity-90"
-                  href="assets/pdf/prices.pdf"
+                  href="assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
                   target="_blank"
                   >Découvrez nos offres en détail</a
                 >
@@ -359,9 +372,10 @@
               class="w-40 h-40 rounded-full items-center justify-center hidden md:flex"
             >
               <img
+                loading="lazy"
                 src="assets/img/meal.jpg"
                 class="w-full h-full object-cover object-center rounded-full"
-                alt="Repas végétariens et bio, sans gluten, végétalien Seyssel Haute Savoie - Ain"
+                alt="TerrAkasha | Repas végétariens et bio, sans gluten, végétalien pour des séjours bien-être à Seyssel Haute Savoie - Ain"
               />
             </div>
             <div class="flex-1 max-w-md">
@@ -384,9 +398,10 @@
               class="w-40 h-40 rounded-full items-center justify-center hidden md:flex"
             >
               <img
+                loading="lazy"
                 src="assets/img/yoga.jpeg"
                 class="w-full h-full object-cover object-center rounded-full"
-                alt="Cours de yoga, massages et soins énergétiques Seyssel Haute Savoie - Ain"
+                alt="TerrAkasha | Cours de yoga, massages et soins énergétiques à Seyssel Haute Savoie - Ain"
               />
             </div>
             <div class="flex-1 max-w-md">
@@ -403,7 +418,7 @@
                 <p class="text-justify">
                   <a
                     class="underline font-bold text-[var(--purple)] md:text-lg block md:pt-2"
-                    href="assets/pdf/massages.pdf"
+                    href="assets/pdf/massages-soins-energetiques-yoga-terrakasha-seyssel.pdf"
                     target="_blank"
                     >Découvrez nos massages, soins et séances de yoga</a
                   >
@@ -417,9 +432,10 @@
               class="w-40 h-40 rounded-full items-center justify-center hidden md:flex"
             >
               <img
+                loading="lazy"
                 src="assets/img/sauna.jpg"
                 class="w-full h-full object-cover object-center rounded-full"
-                alt="Repas végétariens et bio, sans gluten, végétalien Seyssel Haute Savoie - Ain"
+                alt="TerrAkasha | Bain nordique, sauna et bain froid pour un moment de détente comme dans un Spa à Seyssel Haute Savoie - Ain"
               />
             </div>
             <div class="flex-1 max-w-md">
@@ -451,7 +467,7 @@
           </p>
           <a
             class="bg-[var(--green)] text-center text-[var(--white)] md:text-lg block py-2 max-w-lg mx-auto rounded-full hover:opacity-90 mt-4 mb-2"
-            href="assets/pdf/classes.pdf"
+            href="assets/pdf/planning-cours-yoga-hebdo-terrakasha-seyssel.pdf"
             target="_blank"
             >Découvrez le programme détaillé</a
           >
@@ -461,19 +477,22 @@
         </div>
         <div class="flex gap-4 md:gap-6">
           <img
+            loading="lazy"
             src="assets/icons/meditation.svg"
             class="w-20 md:w-28"
-            alt="Cours de yoga Seyssel Haute Savoie - Ain"
+            alt="TerrAkasha | Cours de yoga Seyssel Haute Savoie - Ain"
           />
           <img
+            loading="lazy"
             src="assets/icons/hand.svg"
             class="w-20 md:w-28"
-            alt="Massages Seyssel Haute Savoie - Ain"
+            alt="TerrAkasha | Massages et bien-être Seyssel Haute Savoie - Ain"
           />
           <img
+            loading="lazy"
             src="assets/icons/flower.svg"
             class="w-20 md:w-28"
-            alt="Soins énergétiques Seyssel Haute Savoie - Ain"
+            alt="TerrAkasha | Soins énergétiques Seyssel Haute Savoie - Ain"
           />
         </div>
       </div>
@@ -493,9 +512,10 @@
       >
         <div class="w-full md:min-h-40 md:max-h-80 md:max-w-lg flex-1 bg-[var(--beige)]">
           <img
+            loading="lazy"
             src="assets/img/retraite.jpg"
             class="w-full h-full object-cover object-bottom"
-            alt="Stage, Retraite Spirituelle & Atelier Seyssel Haute Savoie - Ain"
+            alt="TerrAkasha | Stage, Retraite Spirituelle & Atelier Seyssel Haute Savoie - Ain"
           />
         </div>
         <div class="max-w-lg flex-1 px-6 md:px-0">
@@ -543,8 +563,9 @@
         >
           <img
             src="assets/img/about.jpeg"
+            loading="lazy"
             class="w-full h-full object-cover object-center rounded-full"
-            alt="Michel et Ilénia vous accueillent à TerrAkasha Seyssel Haute Savoie - Ain"
+            alt="Michel et Ilénia vous accueillent à TerrAkasha pour votre séjour bien-être à Seyssel Haute Savoie - Ain"
           />
         </div>
       </div>
@@ -566,15 +587,25 @@
             <p>Contactez-nous pour plus d'infos.</p>
             <ul class="pt-8 flex flex-col gap-1">
               <li class="flex gap-2 items-center">
-                <img src="assets/icons/address.svg" class="h-4" />
+                <img
+                  src="assets/icons/address.svg"
+                  class="h-4"
+                  alt="Adresse"
+                  loading="lazy"
+                />
                 737 Rte de Pologny - 74910 Seyssel, France
               </li>
               <li class="flex gap-2 items-center">
-                <img src="assets/icons/phone.svg" class="h-5" />
+                <img src="assets/icons/phone.svg" class="h-5" alt="Téléphone" />
                 +33(0)7.50.60.64.56
               </li>
               <li class="flex gap-2 items-center">
-                <img src="assets/icons/email.svg" class="h-5" />
+                <img
+                  src="assets/icons/email.svg"
+                  class="h-5"
+                  alt="E-mail"
+                  loading="lazy"
+                />
                 <a
                   class="underline font-bold"
                   href="mailto:terrAkasha@protonmail.com"
@@ -587,13 +618,21 @@
                   class="underline font-bold text-[var(--purple)]"
                   href="https://www.facebook.com/profile.php?id=61584020701605"
                   target="_blank"
-                  ><img src="assets/icons/facebook.svg" alt="facebook" class="w-8"
+                  ><img
+                    loading="lazy"
+                    src="assets/icons/facebook.svg"
+                    alt="facebook"
+                    class="w-8"
                 /></a>
                 <a
                   class="underline font-bold text-[var(--purple)]"
                   href="https://www.instagram.com/terrakasha_/"
                   target="_blank"
-                  ><img src="assets/icons/instagram.svg" alt="instagram" class="w-8"
+                  ><img
+                    loading="lazy"
+                    src="assets/icons/instagram.svg"
+                    alt="instagram"
+                    class="w-8"
                 /></a>
               </li>
             </ul>
@@ -701,5 +740,182 @@
         color: orange;
       }
     </style>
+
+    <!-- SEO - JSON-LD SCRIPT -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["BedAndBreakfast", "LodgingBusiness"],
+        "name": "TerrAkasha",
+        "description": "Maison de bien-être et maison d’hôtes à Seyssel (Haute-Savoie - Ain) proposant séjours ressourçants, stages, retraites, yoga, massages, bains nordiques et sauna.",
+        "url": "https://www.terrakasha.com/",
+        "image": "https://www.terrakasha.com/assets/img/terrakasha.jpg",
+        "telephone": "+33750606456",
+        "email": "terrAkasha@protonmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "737 Route de Pologny",
+          "postalCode": "74910",
+          "addressLocality": "Seyssel",
+          "addressCountry": "FR",
+          "addressRegion": "Auvergne-Rhône-Alpes"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.959,
+          "longitude": 5.841
+        },
+        "priceRange": "€€",
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Salle de pratique 60m2",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Bain nordique et sauna",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Repas végétariens et bio",
+            "value": true
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61584020701605",
+          "https://www.instagram.com/terrakasha_/"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Location gîte complet - nuit du samedi au dimanche",
+            "description": "Location du gîte complet TerrAkasha (4 chambres, 10 couchages, cuisine-salon, salle de pratique, terrasse et extérieur) de 16h à 19h le lendemain.",
+            "price": "500",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Location gîte complet - week-end vendredi à dimanche",
+            "description": "Location du gîte complet TerrAkasha pour un week-end de 2 nuits, du vendredi au dimanche.",
+            "price": "900",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Location gîte complet - nuit supplémentaire (à partir de la 3e nuit)",
+            "description": "Nuit supplémentaire pour la location du gîte complet TerrAkasha, à partir de la troisième nuit.",
+            "price": "280",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Nuit supplémentaire après stage",
+            "description": "Nuit supplémentaire par personne après un stage ou une retraite à TerrAkasha.",
+            "price": "35",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Repas - petit-déjeuner, déjeuner et dîner",
+            "description": "Formule pension complète par personne et par jour : petit-déjeuner, déjeuner et dîner.",
+            "price": "50",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Repas - brunch et dîner",
+            "description": "Formule par personne et par jour : brunch et dîner.",
+            "price": "45",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Petit-déjeuner supplémentaire",
+            "description": "Petit-déjeuner supplémentaire par personne.",
+            "price": "10",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Repas supplémentaire",
+            "description": "Repas supplémentaire par personne.",
+            "price": "20",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Location salle de pratique seule - journée",
+            "description": "Location de la salle de pratique seule pour une journée.",
+            "price": "100",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Location salle de pratique seule - demi-journée",
+            "description": "Location de la salle de pratique seule pour une demi-journée.",
+            "price": "50",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Location salle de pratique seule - à l'heure",
+            "description": "Location de la salle de pratique seule à l’heure.",
+            "price": "15",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Salle de pratique + espace cuisine/séjour - demi-journée",
+            "description": "Location de la salle de pratique avec l’espace cuisine/séjour pour une demi-journée.",
+            "price": "70",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Salle de pratique + espace cuisine/séjour - journée",
+            "description": "Location de la salle de pratique avec l’espace cuisine/séjour pour une journée.",
+            "price": "130",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          },
+          {
+            "@type": "Offer",
+            "name": "Location espace nordique - journée",
+            "description": "Location de l’espace nordique (bassin d’eau chaude, bassin d’eau froide et sauna) pour une journée.",
+            "price": "40",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.terrakasha.com/assets/pdf/tarifs-terrakasha-2026-gite-salle-seyssel.pdf"
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
