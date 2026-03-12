@@ -150,7 +150,7 @@
             >
               <a href="#welcome"
                 ><button @click="open = false">
-                  <img src="assets/img/home.svg" alt="Accueil" class="w-8" /></button
+                  <img src="assets/icons/home.svg" alt="Accueil" class="w-8" /></button
               ></a>
               <a href="#place"
                 ><button @click="open = false">Découvrir TerrAkasha</button></a
@@ -197,7 +197,7 @@
         <div class="flex-1">
           <h1 class="font-title text-3xl">TerrAkasha</h1>
           <h3 class="font-bold">Maison de bien-être</h3>
-          <p class="italic text-lg">Centre de développement personnel en Haute-Savoie</p>
+          <p class="italic text-lg">Conscience et développement humain en Haute-Savoie</p>
           <p class="pt-2 text-justify">
             Ici, chaque pas est une invitation à
             <span class="font-bold">reconnecter à l’essentiel</span>, chaque souffle une
@@ -513,7 +513,7 @@
         <div class="w-full md:min-h-40 md:max-h-80 md:max-w-lg flex-1 bg-[var(--beige)]">
           <img
             loading="lazy"
-            src="assets/img/retraite.jpg"
+            src="assets/img/retraite.jpeg"
             class="w-full h-full object-cover object-bottom"
             alt="TerrAkasha | Stage, Retraite Spirituelle & Atelier Seyssel Haute Savoie - Ain"
           />
@@ -525,15 +525,26 @@
             Stages, ateliers, formations et retraites : des expériences pour explorer,
             apprendre et élargir notre conscience.
           </p>
-          <a
+          <!-- <a
             class="bg-[var(--purple)] text-center text-[var(--white)] md:text-lg block py-2 max-w-lg mx-auto rounded-full hover:opacity-90 mt-4 mb-2"
             href="assets/soins.pdf"
             target="_blank"
             >Découvrez notre calendrier détaillé</a
+          > -->
+          <div
+            class="bg-[var(--purple)] text-center text-[var(--white)] md:text-lg block py-2 max-w-lg mx-auto rounded-full mt-4 mb-2 cursor-not-allowed"
+            href="assets/soins.pdf"
+            target="_blank"
           >
+            Calendrier à venir
+          </div>
           <p class="text-center text-base italic">
-            Réservations directement auprès des animateurs.
+            Vous souhaitez organiser un stage ou un atelier ?
+            <a href="#contact" class="underline cursor-pointer">Contactez-nous</a>
           </p>
+          <!-- <p class="text-center text-base italic">
+            Réservations directement auprès des animateurs.
+          </p> -->
         </div>
       </div>
 
