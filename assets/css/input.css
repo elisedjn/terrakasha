@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@source "../../index.html";
+
+:root {
+  --purple: #5a3f6e;
+  --green: #5f714f;
+  --yellow: #775f1f;
+  --beige: #f5f0e8;
+  --lavender: #d9c9d2;
+  --black: #2b1a40;
+  --white: #fefbf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -114px;
+  visibility: hidden;
+}
+
+.font-title {
+  font-family: "Handlee", sans-serif;
+  font-weight: 400;
+}
+
+.header-bar {
+  box-shadow: 0 1px 8px rgba(43, 26, 64, .08);
+}
+
+.nav-link {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 2.75rem;
+}
+
+.mobile-menu-link {
+  text-align: center;
+}
+
+.hero-image {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.h-50 {
+  height: 12.5rem;
+}
+
+.min-w-34 {
+  min-width: 8.5rem;
+}
+
+.w-50 {
+  width: 12.5rem;
+}
+
+.w-90 {
+  width: 22.5rem;
+}
+
+.focus\:border-b-3:focus {
+  border-bottom-width: 3px;
+}
+
+.focus\:border-3:focus {
+  border-width: 3px;
+}
+
+@media (width >= 48rem) {
+  a.anchor {
+    top: -112px;
+  }
+
+  .md\:h-70 {
+    height: 17.5rem;
+  }
+}
