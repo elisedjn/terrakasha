@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --purple: #5a3f6e;
+  --green: #5f714f;
+  --yellow: #775f1f;
+  --beige: #f5f0e8;
+  --lavender: #d9c9d2;
+  --black: #2b1a40;
+  --white: #fefbf8;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -114px;
+  visibility: hidden;
+}
+
+.font-title {
+  font-family: "Handlee", sans-serif;
+  font-weight: 400;
+}
+
+.header-bar {
+  box-shadow: 0 1px 8px rgba(43, 26, 64, .08);
+}
+
+.nav-link {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 2.75rem;
+}
+
+.mobile-menu-link {
+  text-align: center;
+}
+
+.hero-image {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+@media (width >= 48rem) {
+  a.anchor {
+    top: -112px;
+  }
+}
